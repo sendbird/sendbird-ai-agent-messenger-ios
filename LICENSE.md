@@ -34,3 +34,42 @@ a. anything related to the SDK, services, or content (including code) on third p
 
 b. claims for breach of contract, breach of warranty, guarantee or condition, strict liability, negligence, or other tort to the extent permitted by applicable law.
 
+---
+
+## Third Party Licenses
+
+This project incorporates third-party software components that are distributed under their own licenses. The following libraries are included, along with links to their repositories and the names of their respective licenses. For detailed license texts, please refer to the full text included later in this document or visit the official repository.
+
+### Splash
+- **Repository:** [JohnSundell/Splash](https://github.com/JohnSundell/Splash)
+- **License:** MIT License
+
+### MarkdownUI
+- **Repository:** [gonzalezreal/swift-markdown-ui](https://github.com/gonzalezreal/swift-markdown-ui)
+- **License:** MIT License
+
+*Note: All third-party libraries listed above are used under the terms of the MIT License, which is provided in full below.*
+
+---
+
+## The MIT License (MIT)
+
+Copyright (c) 2020 Guillermo Gonzalez
+
+Permission is hereby granted, free of charge, to any person obtaining a copy  
+of this software and associated documentation files (the "Software"), to deal  
+in the Software without restriction, including without limitation the rights  
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell  
+copies of the Software, and to permit persons to whom the Software is  
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all  
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR  
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,  
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE  
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER  
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,  
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE  
+SOFTWARE.
