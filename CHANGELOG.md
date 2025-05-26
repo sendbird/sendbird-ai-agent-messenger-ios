@@ -1,5 +1,22 @@
 # Changelog
 
+## v0.9.0 (May 26, 2025)
+### Improvements
+- **SBAConfig**
+  - Added `isMessageReceiptStateEnabled` property to the `Conversation`
+- **NSObject+SBA**
+  - Made `sba_className` properties public
+- **SBAQueryParamsSet**
+  - Introduced global query parameter builder (`public static var queryParamsBuilder`) for conversation list
+- **SBAConversationListModule**
+  - Clarified `ConversationCell` type, removed `CustomDataCell`
+- **ConversationListFetcher**
+  - Related file removed (internal structure refactored)
+
+### Privacy Info
+- Added `privacyInfo.xcprivacy` file to comply with Apple’s new privacy requirements.
+- Describes data usage in the app as required for App Store submission.
+
 ## v0.0.10 (May 20, 2025)
 
 ### FIX
