@@ -1,5 +1,10 @@
 # Changelog
 
+## v0.9.1 (May 27, 2025)
+### Improvements
+- Added `@objc` annotations to avoid naming conflict
+- Debug print statements inside the UIView extension for layout slot validation were commented out.
+
 ## v0.9.0 (May 26, 2025)
 ### Improvements
 - **SBAConfig**
