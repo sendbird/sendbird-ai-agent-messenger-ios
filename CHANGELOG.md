@@ -1,5 +1,9 @@
 # Changelog
 
+## v0.9.2 (May 28, 2025)
+### Improvements
+- Supports Objective-C compatibility
+
 ## v0.9.1 (May 27, 2025)
 ### Improvements
 - Added `@objc` annotations to avoid naming conflict
