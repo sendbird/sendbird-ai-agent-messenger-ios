@@ -1,5 +1,13 @@
 # Changelog
 
+## v0.9.2 (May 29, 2025)
+### Improvements
+#### Customization supports
+- Added `isConversationClosedViewEnabled` property to `SBAConfig` to toggle disabling conversation closed view
+- Made `ConversationViewController` type in `SBAViewControllerSet`
+- Changed access levels for some interfaces to support customizations
+- Refactored and opened layout methods for subclassing in `SBAConversationListModule.Header`
+
 ## v0.9.2 (May 28, 2025)
 ### Improvements
 - Supports Objective-C compatibility
