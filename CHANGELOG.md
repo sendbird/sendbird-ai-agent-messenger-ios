@@ -1,5 +1,10 @@
 # Changelog
 
+### v0.0.50 (Jun 10, 2025)
+
+### Improvements
+- Test2
+
 ## v0.9.2 (May 29, 2025)
 ### Improvements
 #### Customization supports
