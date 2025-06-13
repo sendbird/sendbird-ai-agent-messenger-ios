@@ -1,5 +1,10 @@
 # Changelog
 
+### v0.9.4 (Jun 13, 2025)
+
+### Improvements
+- Applied hidden state to poweredByMessage using appAttribute
+
 ## v0.9.2 (May 29, 2025)
 ### Improvements
 #### Customization supports
