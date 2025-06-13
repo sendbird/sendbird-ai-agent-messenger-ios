@@ -7,8 +7,7 @@
 
 import Foundation
 
-@_spi(SendbirdInternal) import SendbirdAIAgentCore
-@_exported import SendbirdAIAgentCore
+@_spi(SendbirdInternal) @_exported import SendbirdAIAgentCore
 
 public extension AIAgentMessenger {
     static func initialize(
