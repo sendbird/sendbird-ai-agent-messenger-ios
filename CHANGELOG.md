@@ -1,5 +1,19 @@
 # Changelog
 
+### v0.9.5 (Jun 25, 2025)
+
+### Improvements
+
+- Fixed proper handling of markAsRead
+- Updated to use cached active channel
+
+### New interfaces
+
+- Add `SBAMessageCSATData` struct and `DataType` enum
+- Add `SBAMessageTemplate`, `SBAMessageTemplate.Action`, and `ActionType` enum
+- Add `didTapMessageLink()` event in Conversation ListComponent
+  - Enables custom handling of link actions in markdown view
+
 ### v0.9.4 (Jun 13, 2025)
 
 ### Improvements
