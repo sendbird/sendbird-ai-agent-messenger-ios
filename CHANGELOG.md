@@ -1,5 +1,24 @@
 # Changelog
 
+### v0.9.6 (Jun 27, 2025)
+
+### BREAKING CHANGES
+- **Minimum Requirements**: Xcode 16.3+ (Swift 6.1+) now required
+
+#### What Changed
+- Updated to Swift 6.1 to resolve Apple's Swift compiler compatibility issues between versions 6.0 and 6.1
+- Addresses module interface incompatibility introduced in Swift 6.1
+
+#### Why This Change?
+Apple's Swift 6.1 compiler cannot load modules built with Swift 6.0, even with `BUILD_LIBRARY_FOR_DISTRIBUTION` enabled. This affects users on macOS Sequoia (which requires Xcode 16+) and those using newer Xcode versions.
+
+#### If You See This Error:
+```
+Failed to build module 'SendbirdAIAgentCore'; 
+this SDK is not supported by the compiler
+```
+**Fix**: Update to Xcode 16.3+, then clean and rebuild your project.
+
 ### v0.9.5 (Jun 25, 2025)
 
 ### Improvements
