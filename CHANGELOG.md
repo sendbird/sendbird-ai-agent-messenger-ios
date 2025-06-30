@@ -1,5 +1,10 @@
 # Changelog
 
+### v0.9.8 (Jun 30, 2025)
+
+### Fixed
+- Updated swift-tools-version to 6.1
+
 ### v0.9.7 (Jun 30, 2025)
 
 ### Fixed
