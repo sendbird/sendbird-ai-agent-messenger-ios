@@ -1,5 +1,10 @@
 # Changelog
 
+### v0.9.7 (Jun 30, 2025)
+
+### Fixed
+- Improved framework binary compatibility across different Swift versions
+
 ### v0.9.6 (Jun 27, 2025)
 
 ### BREAKING CHANGES
