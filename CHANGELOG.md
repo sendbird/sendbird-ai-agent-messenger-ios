@@ -1,5 +1,10 @@
 # Changelog
 
+### v0.9.10 (Jul 01, 2025)
+
+### Fixed
+- Updated minimum required version of the dependency SDK
+
 ### v0.9.9 (Jun 30, 2025)
 
 ### Fixed
