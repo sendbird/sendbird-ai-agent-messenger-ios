@@ -1,5 +1,10 @@
 # Changelog
 
+### v0.9.11 (Jul 14, 2025)
+
+### Features
+- Updated file upload button visibility to ensure it's visible after handed off to human agents
+
 ### v0.9.10 (Jul 01, 2025)
 
 ### Fixed
