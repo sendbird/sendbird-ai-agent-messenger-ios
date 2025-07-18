@@ -1,5 +1,11 @@
 # Changelog
 
+### v0.9.12 (Jul 18, 2025)
+
+### Improvements
+
+- Improved handling of anonymous users
+
 ### v0.9.11 (Jul 14, 2025)
 
 ### Features
