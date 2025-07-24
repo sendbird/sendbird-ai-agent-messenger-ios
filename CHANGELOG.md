@@ -1,5 +1,12 @@
 # Changelog
 
+### v0.9.13 (Jul 24, 2025)
+
+### Improvements
+
+- Improved functionality to handle Desk CSAT
+  - Added `desk` type in `SBAMessageCSATData.DataType`
+
 ### v0.9.12 (Jul 18, 2025)
 
 ### Improvements
