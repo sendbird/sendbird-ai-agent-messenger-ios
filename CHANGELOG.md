@@ -4,6 +4,12 @@
 
 ### Improvements
 
+- Fixed an issue where the file attachment view was not appearing.
+
+### v0.9.14 (Aug 07, 2025)
+
+### Improvements
+
 - Improved functionality to handle Desk CSAT
   - Added `desk` type in `SBAMessageCSATData.DataType`
 
