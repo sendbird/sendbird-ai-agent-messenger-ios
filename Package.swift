@@ -20,5 +20,6 @@ let package = Package(
                 .product(name: "SendbirdAIAgentCore", package: "sendbird-ai-agent-core-ios")
             ]
         )
-    ]
+    ],
+    swiftLanguageModes: [.v5]
 )
