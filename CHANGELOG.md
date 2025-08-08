@@ -1,5 +1,10 @@
 # Changelog
 
+### v0.9.15 (Aug 08, 2025)
+
+
+### Improvements
+- Fixed image ratio handling.
 ### v0.10.0 (Aug 08, 2025)
 
 ### Features
