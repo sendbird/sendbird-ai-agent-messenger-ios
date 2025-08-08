@@ -1,5 +1,150 @@
 # Changelog
 
+### v0.10.0 (Aug 08, 2025)
+
+### Features
+- **New Authentication Flow**: Streamlined authentication with automatic connection
+  ```swift
+  AIAgentMessenger.authenticate(aiAgentId: "agent123") { result in
+      // Returns activeChannelURL on success
+  }
+  ```
+  - Added `authenticate(aiAgentId:paramsBuilder:completionHandler:)` method
+  - Added `AuthenticateParamsBuilder` for configuration
+  - Added `AuthenticateResultHandler` returning `activeChannelURL` on success
+
+- **Conversation Creation**: New API for creating conversations programmatically
+  ```swift
+  AIAgentMessenger.createConversation(aiAgentId: "agent123") { result in
+      // Returns channelURL of created conversation
+  }
+  ```
+  - Added `createConversation(aiAgentId:paramsBuilder:completionHandler:)` method
+  - Added `ConversationCreateParamsBuilder`
+  - Added `ChannelURLResponseHandler` for conversation creation results
+
+- **Enhanced Builder Pattern Support**: All major APIs now support builder pattern
+  - `baseInitialize(appId:paramsBuilder:completionHandler:)` with `InitializeParamsBuilder`
+  - `attachLauncher(aiAgentId:channelURL:paramsBuilder:)` with `LauncherSettingsParamsBuilder`
+  - `presentConversation(aiAgentId:channelURL:paramsBuilder:)` with `ConversationSettingsParamsBuilder`
+  - `presentConversationList(aiAgentId:paramsBuilder:)` with `ConversationSettingsParamsBuilder`
+
+- **Session Factory Methods**: Simplified session creation
+  ```swift
+  // For authenticated users
+  let session = AIAgentMessenger.SessionInfo.manual(
+      userId: "user123",
+      sessionToken: "token",
+      sessionDelegate: delegate
+  )
+  
+  // For anonymous users
+  let session = AIAgentMessenger.SessionInfo.anonymous()
+  ```
+
+- **Enhanced Template Support**: Extended message template configuration
+  - Added `Cascade` template configuration in `SBAConfig.Conversation.Template.InternalVariables`
+  - New cascade spacing and padding properties: `spacing`, `paddingRight`, `paddingLeft`
+
+### Improvements
+- **Color Scheme Updates**: New method for updating color scheme
+  - `update(colorScheme:)` method for dynamic color scheme changes
+
+- **Session Delegate Enhancements**: Improved session token management
+  - `SessionDelegate` protocol now properly handles token updates
+  - Automatic session token refresh through delegate callbacks
+  - Optional methods in `SessionDelegate` with default implementations
+
+- **Error Handling**: New error types for better error classification
+  - `SBAErrorType.authenticateFailed` for authentication failures
+  - `SBAErrorType.invalidAuthentication` for invalid authentication state
+  - `SBAErrorType.invalidAgentInfo` for invalid agent information
+
+- **Push Notification**: All completion handlers now execute on service queue
+  - `registerPushToken(deviceToken:unique:completionHandler:)`
+  - `unregisterPushToken(completionHandler:)`
+  - `unregisterAllPushToken(completionHandler:)`
+
+### Bug Fixes
+- **Localization**: Fixed duplicate locale updates
+  - `SBALocalization.updateLocale(_:)` now checks for duplicate updates before applying
+
+### Performance & Stability
+- **UI Performance**: Fixed infinite recursion issues
+- **Memory Management**: Better resource cleanup
+- **Template Configuration**: Extended template system
+- **Type Safety**: Improved type definitions
+
+### BREAKING CHANGES
+- **Session Management**: Complete overhaul of session management system
+  - `UserSessionInfo` class has been replaced with new `SessionInfo` hierarchy
+  - `ManualSessionInfo` for authenticated users with custom user data
+  - `AnonymousSessionInfo` for anonymous users (requires app attribute settings enabled)
+  - `updateSessionInfo(with:)` now accepts `SessionInfo` instead of `UserSessionInfo`
+  - Session info must be reset after calling `deauthenticate()` or when authentication expires
+
+- **Initialization Parameters**: `InitializeParams` constructor removed
+  - Properties are now mutable: `logLevel`, `startHandler`, `migrationHandler`, `apiHost`, `wsHost`
+  - Use builder pattern instead of constructor parameters
+
+---
+
+**Migration Guide for v0.10.0:**
+
+1. **Update Session Management**:
+   ```swift
+   // OLD (v0.9.x)
+   let sessionInfo = AIAgentMessenger.UserSessionInfo(
+       userId: "user123",
+       sessionToken: "token",
+       sessionDelegate: delegate
+   )
+   
+   // NEW (v0.10.0)
+   let sessionInfo = AIAgentMessenger.SessionInfo.manual(
+       userId: "user123",
+       sessionToken: "token", 
+       sessionDelegate: delegate
+   )
+   ```
+
+2. **Update Initialization**:
+   ```swift
+   // OLD (v0.9.x)
+   let params = AIAgentMessenger.InitializeParams(
+       logLevel: .info,
+       apiHost: "custom.host"
+   )
+   
+   // NEW (v0.10.0)
+   AIAgentMessenger.baseInitialize(appId: "app123") { params in
+       params.logLevel = .info
+       params.apiHost = "custom.host"
+   }
+   ```
+
+3. **Use New Authentication API**:
+   ```swift
+   // NEW in v0.10.0
+   AIAgentMessenger.authenticate(aiAgentId: "agent123") { result in
+       switch result {
+       case .success(let activeChannelURL):
+           print("Authenticated with channel: \(activeChannelURL)")
+       case .failure(let error):
+           print("Authentication failed: \(error)")
+       }
+   }
+   ```
+
+4. **Update Builder Pattern Usage**:
+   ```swift
+   // NEW builder pattern support
+   AIAgentMessenger.attachLauncher(aiAgentId: "agent123") { params in
+       params.options.position = .bottomRight
+       params.parent = viewController
+   }
+   ```
+
 ### v0.9.14 (Aug 07, 2025)
 
 ### Improvements
