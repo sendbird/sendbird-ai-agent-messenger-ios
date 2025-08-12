@@ -1,5 +1,11 @@
 # Changelog
 
+### v0.10.1 (Aug 12, 2025)
+
+
+### Improvements
+- iOS minor version issue supports
+
 ### v0.9.15 (Aug 08, 2025)
 
 
