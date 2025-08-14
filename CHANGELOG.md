@@ -1,5 +1,11 @@
 # Changelog
 
+### v0.10.2 (Aug 14, 2025)
+
+
+### Improvements
+- Supports minimum version to iOS 14 
+
 ### v0.10.1 (Aug 12, 2025)
 
 
