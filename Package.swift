@@ -1,9 +1,9 @@
-// swift-tools-version:6.1
+// swift-tools-version:5.10
 import PackageDescription
 
 let package = Package(
     name: "SendbirdAIAgentMessenger",
-    platforms: [.iOS(.v15)],
+    platforms: [.iOS(.v14)],
     products: [
         .library(name: "SendbirdAIAgentMessenger", targets: ["SendbirdAIAgentMessenger"])
     ],
@@ -20,6 +20,5 @@ let package = Package(
                 .product(name: "SendbirdAIAgentCore", package: "sendbird-ai-agent-core-ios")
             ]
         )
-    ],
-    swiftLanguageModes: [.v5]
+    ]
 )
