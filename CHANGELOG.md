@@ -1,5 +1,14 @@
 # Changelog
 
+### v0.10.3 (Aug 18, 2025)
+
+### Improvements
+- Profile Image Hidden Options in Conversation
+  - Added `SBAConfig.Conversation.Header.shouldShowProfile` 
+    - Controls profile image visibility in conversation header
+  - Added `SBAConfig.Conversation.List.shouldShowSenderProfile`
+    - Controls sender profile image visibility in message list 
+
 ### v0.10.2 (Aug 14, 2025)
 
 
