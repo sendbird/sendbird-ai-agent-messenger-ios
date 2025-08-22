@@ -1,5 +1,11 @@
 # Changelog
 
+### v0.10.5 (Aug 22, 2025)
+
+### Changed
+- Exposed public properties in SBAConversationModule.Header:
+  - `menuButton`, `closeButton`, and `handoffButton`
+
 ### v0.10.4 (Aug 18, 2025)
 
 ### Improvements
