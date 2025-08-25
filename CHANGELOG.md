@@ -1,5 +1,23 @@
 # Changelog
 
+### v0.10.6 (Aug 25, 2025)
+
+### Features
+- **Conversation Header Customization**
+  - Made `SBAConversationModule.Header.TitleView` public for custom title view implementation
+
+### Improvements
+- Improved Japanese translation quality with more natural expressions
+- Date separators now respect user's system locale settings
+
+### Bug Fixes
+- Fixed theme not applying
+
+### Performance
+- Fixed infinite `setupStyles()` recursion issue
+- Optimized streaming event handling to prevent duplicates
+- Improved table view reload performance with debouncing
+
 ### v0.10.5 (Aug 22, 2025)
 
 ### Changed
