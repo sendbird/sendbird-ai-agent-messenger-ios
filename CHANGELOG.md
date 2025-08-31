@@ -1,5 +1,40 @@
 # Changelog
 
+### v0.10.7 (Aug 31, 2025)
+
+### Features
+- **Conversation Module Customization**
+  - Made `SBAConversationModule.List.Cell` public with customizable subviews:
+    - `UserNameView`
+    - `StateView`
+    - `DateView`
+  - Added public access to message cell types:
+    - `AdminMessageCell`
+    - `UserMessageCell`
+    - `FileMessageCell`
+    - `TypingIndicatorMessageCell`
+    - `UnknownMessageCell`
+
+- **Header Configuration**
+  - Added `ContentAlignment` enum in `SBAConfig.Conversation.Header` for content alignment control
+    - Supports `.leading`, `.center`, `.trailing` alignment options
+  - Added `contentAlignment` property (default: `.leading`)
+
+### Improvements
+- Common
+  - Improved memory management with proper cleanup in deinit methods
+  - Enhanced null safety with optional handling
+
+### Bug Fixes
+- **View Lifecycle**
+  - Fixed potential crash in `SBAFileViewController` when dismissing
+  - Added safety checks for view controller state before animations
+  - Fixed infinite recursion in `setupStyles()` 
+
+- **Layout Issues**
+  - Fixed constraint activation timing issues
+  - Fixed markdown view layout with proper max width handling
+
 ### v0.10.6 (Aug 25, 2025)
 
 ### Features
