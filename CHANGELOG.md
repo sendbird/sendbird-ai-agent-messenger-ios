@@ -1,5 +1,22 @@
 # Changelog
 
+### v0.10.8 (Sep 01, 2025)
+
+### Improvements
+
+- Added `InitParamsBuilder` for `SBAConversationViewController`
+
+```swift
+SBAViewControllerSet.ConversationViewController.init(
+  aiAgentId: "YOUR_AI_AGENT_ID",
+  paramsBuilder: { params in
+    params.language = "ko"
+    params.countryCode = "KR"
+    params.context = [:]
+  }
+)
+```
+
 ### v0.10.7 (Aug 31, 2025)
 
 ### Features
