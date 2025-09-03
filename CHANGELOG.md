@@ -1,5 +1,23 @@
 # Changelog
 
+### v0.10.9 (Sep 03, 2025)
+
+### Public API Changes
+- **`SBAViewModelSet.ConversationViewModel` is now public** - Allows external customization of conversation view models
+- **`SBAConversationViewModel` class and its delegate methods are now public** - Enables subclassing and custom implementations
+- **`SBAConversationViewController.viewModel` and `channel` properties are now public** - Provides public access to conversation state
+
+### Features
+- **Added `reset()` functionality to conversation components** - Enables starting new conversations without navigation controller
+
+### Improvements  
+- **Enhanced conversation initialization** - Refactored `SBAConversationViewModel` to use builder pattern for initialization parameters
+- **Improved "Start New Conversation" flow** - Fixed behavior when using ViewControllerSet without navigation controller
+
+### Bug Fixes
+- **Fixed conversation reset when starting new conversation** - Properly resets header, list, and input components
+- **Fixed navigation handling for non-navigation controller scenarios** - Gracefully handles cases without `AIAgentNavigationController`
+
 ### v0.10.8 (Sep 01, 2025)
 
 ### Improvements
