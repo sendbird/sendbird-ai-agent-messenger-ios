@@ -1,5 +1,261 @@
 # Changelog
 
+### v1.0.0 (Sep 25, 2025)
+
+# Sendbird AI Agent iOS SDK - GA Release Changelog
+
+## v1.0.0 (Sep 25, 2025)
+
+### Highlights
+
+- **AI Agent Chat**: Engage in natural, context-aware conversations with an AI agent, including real-time messaging and conversation list functionality.
+- **Messenger Launcher Widget**: Easily add a floating launcher button to your app's interface for quick access to AI chat.
+- **Full-Screen Messenger**: Launch full-screen chat conversations with the AI agent through dedicated screens.
+- **Rich Message Templates**: Support for various interactive message formats through structured templates including buttons, cards, lists, and more.
+- **Easy Integration**: Initialize and launch the AI agent messenger with just a few lines of code.
+- **Markdown & Code Syntax Highlighting**: Comprehensive markdown text rendering with syntax highlighting for code blocks.
+- **Multi-language Support**: Built-in support for 11 languages with the ability to extend to additional languages through custom localization.
+- **Complete Theme System**: Provides a foundational theme system including light/dark mode, with ongoing expansion to add richer customization options.
+- **Modular Architecture**: Flexible module system allowing complete customization of UI components.
+
+---
+
+### Requirements
+The minimum requirements for AI Agent for iOS are:
+
+- iOS 14.0 or higher
+- Swift 5.10 or higher
+- Xcode 16.3 or higher
+- SendbirdChatSDK 4.30.0 or higher
+- SendbirdUIMessageTemplate 3.32.2 or higher
+
+### Installation
+The SDK can be installed through various package managers.
+
+**Swift Package Manager (SPM)**
+```swift
+dependencies: [
+    .package(url: "https://github.com/sendbird/sendbird-ai-agent-messenger-ios.git", from: "1.0.0")
+]
+```
+
+**CocoaPods**
+```ruby
+source 'https://github.com/sendbird/sendbird-ios-distribution.git'
+source 'https://cdn.cocoapods.org/'
+
+platform :ios, '15.0'
+
+target 'YourApp' do
+  use_frameworks!
+
+  pod 'SendbirdAIAgentMessenger', '~> 1.0.0'
+end
+
+# Required for XCFramework download scripts
+post_install do |installer|
+  project = installer.aggregate_targets[0].user_project
+  project.targets.each do |target|
+      target.build_configurations.each do |config|
+          config.build_settings['ENABLE_USER_SCRIPT_SANDBOXING'] = 'NO'
+      end
+  end
+  project.save
+end
+```
+
+---
+
+### Features
+
+**Sendbird AI Agent Messenger SDK has been officially released!**
+This SDK enables you to seamlessly integrate an enterprise-grade AI-powered chat agent into your iOS applications.
+
+#### 1. Messenger Launcher Widget
+The SDK provides MessengerLauncher functionality that can be easily attached to your application's root view programmatically.
+
+To add the MessengerLauncher to your screen, simply call the `attachLauncher()` function specifying the AI agent ID:
+
+```swift
+AIAgentMessenger.attachLauncher(aiAgentId: "your_ai_agent_id")
+```
+
+- Configure the Launcher's behavior and appearance through `SBALauncherOptions`:
+  - **`entryPoint`**: Specify which screen to open from the launcher
+    - `conversation`: Navigate directly to conversation screen (default)
+    - `conversationList`: Navigate to conversation list screen
+
+  - **`layout.position`**: Determine which corner of the screen the launcher appears in
+    - `leadingTop`: Top left
+    - `trailingTop`: Top right
+    - `leadingBottom`: Bottom left
+    - `trailingBottom`: Bottom right (default)
+
+  - **`layout.margin`**: Set margins around the launcher button
+  - **`layout.useSafeArea`**: Configure safe area usage
+
+  - **`displayStyle`**: Set messenger display mode
+    - `fullscreen`: Display in full-screen mode
+    - `overlay`: Display as overlay (default)
+
+  - **`context`**: Key-value dictionary for passing conversation context information
+
+> Attach the launcher to your activity or view to create a floating entry point for AI chat.
+
+---
+
+#### 2. Full-Screen Messenger
+You can open full-screen conversations.
+
+```swift
+// Present conversation screen
+AIAgentMessenger.presentConversation(aiAgentId: "your_ai_agent_id")
+
+// Or present conversation list screen
+AIAgentMessenger.presentConversationList(aiAgentId: "your_ai_agent_id")
+```
+
+---
+
+#### 3. Rich Message Templates
+Support for various interactive elements through structured message templates including buttons, cards, lists, and more.
+
+---
+
+#### 4. Easy Integration
+Initialize and launch the AI agent messenger with just a few lines of code.
+
+```swift
+// Create new conversation
+AIAgentMessenger.createConversation(aiAgentId: "your_ai_agent_id") { result in
+    switch result {
+    case .success(let channelURL):
+        // Conversation creation successful
+    case .failure(let error):
+        // Conversation creation failed
+    }
+}
+```
+
+---
+
+#### 5. Markdown & Code Syntax Highlighting
+Provides advanced text rendering capabilities including markdown text rendering and code block syntax highlighting.
+
+---
+
+#### 6. Multi-language Support
+Supports global application development through a multi-language support system.
+
+- **Built-in 11 Language Support**: Korean, English, Japanese, German, Spanish, Italian, French, Dutch, Portuguese, Turkish, Hindi
+- **Extensible Localization**: Custom localization system for additional language support
+- **Dynamic Language Switching**: Real-time language changes within the app
+- **Language-specific Optimization**: Automatic font and layout adjustments for each language
+- **Developer-friendly**: Easy extension following standard iOS localization patterns
+
+---
+
+#### 7. Complete Theme System
+Provides a foundational theme system including light/dark mode. Future updates will add richer customization options.
+
+```swift
+// Update color scheme
+AIAgentMessenger.update(colorScheme: .dark)
+
+// Font customization
+SBAFontSet.fontFamily = "YourCustomFont"
+```
+
+- **Basic Theme Support**: Automatic light/dark mode switching
+- **Font Customization**: Custom font family support through SBAFontSet
+- **Ongoing Expansion**: Gradual addition of brand-specific color and style options
+
+---
+
+#### 8. Modular Architecture
+Flexible module system allows complete customization of UI components.
+
+- **MVVM Pattern**: Clean separation of concerns
+- **Event-driven Communication**: Delegate, DataSource, HandleEvent patterns
+- **Module Replacement**: Easy UI customization through simple module replacement
+- **@LayoutSlot Pattern**: Declarative UI composition
+
+---
+
+#### 9. Session Management and Authentication
+The SDK supports flexible user authentication through two session types.
+
+**Authenticated Users (Manual Session)**
+```swift
+// Create session info for authenticated users
+let sessionInfo = AIAgentMessenger.SessionInfo.manual(
+    userId: "user123",
+    sessionToken: "your_session_token",
+    sessionDelegate: self // Implement SessionDelegate protocol
+)
+
+// Update session information
+AIAgentMessenger.updateSessionInfo(with: sessionInfo)
+
+// Authenticate with AI agent
+AIAgentMessenger.authenticate(aiAgentId: "your_ai_agent_id") { result in
+    switch result {
+    case .success(let activeChannelURL):
+        // Authentication successful
+    case .failure(let error):
+        // Authentication failed
+    }
+}
+```
+
+**Anonymous Users (Anonymous Session)**
+```swift
+// Create session info for anonymous users (app attribute settings required)
+let anonymousSessionInfo = AIAgentMessenger.SessionInfo.anonymous()
+
+// Update session information
+AIAgentMessenger.updateSessionInfo(with: anonymousSessionInfo)
+
+// Authenticate with AI agent (same method)
+AIAgentMessenger.authenticate(aiAgentId: "your_ai_agent_id") { result in
+    // Handle authentication
+}
+```
+
+> **Note**: To use Anonymous Session, app attribute settings must be enabled in the Sendbird dashboard.
+
+---
+
+### Architecture
+
+#### Modular Architecture
+- **MVVM Pattern**: Clean separation of concerns
+- **Event-driven Communication**: Delegate, DataSource, HandleEvent patterns
+- **Module System**: Flexible customization through `SBAModuleSet`
+- **@LayoutSlot Pattern**: Declarative UI composition
+
+#### Key Components
+- **AIAgentMessenger**: Main public API
+- **SBAModuleSet**: Customizable module system
+- **SBATheme**: Comprehensive theme management
+
+---
+
+### Known Issues
+
+- Limited support for some SwiftUI features on iOS 14.0
+
+---
+
+### Support
+
+- **Sample Apps**: [iOS AIAgent basic sample](https://github.com/sendbird/sendbird-ai-agent/tree/main/ios/sample)
+- **Technical Support**: [Sendbird Support](https://sendbird.com/support)
+
+---
+
+*This release is the first GA (Generally Available) version of the Sendbird AI Agent iOS SDK. It is safe for use in production environments.*
+
 ### v0.10.9 (Sep 03, 2025)
 
 ### Public API Changes
