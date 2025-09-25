@@ -1,4 +1,4 @@
-# SendbirdAIAgentMessenger (Beta)
+# SendbirdAIAgentMessenger
 
 This repository provides a customizable AI Agent Messenger package for each client. It is designed to deliver client-specific versions via dedicated branches using Swift Package Manager (SPM).
 
