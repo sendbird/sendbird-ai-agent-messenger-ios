@@ -1,5 +1,15 @@
 # Changelog
 
+### v1.1.0 (Oct 02, 2025)
+
+# Interfaces
+- Enhanced `SBAMessageCSATData`: Added new public properties for custom CSAT configuration
+  - title, csatQuestion, csatSubmitLabel, csatSubmittedLabel
+  - csatScores: [ScoreData], cre: CREData?, followUp: [FollowUpData]?
+
+# Features
+- Custom CSAT support: Dashboard-driven CSAT UI customization with follow-up questions
+
 ### v1.0.0 (Sep 25, 2025)
 
 # Sendbird AI Agent iOS SDK - GA Release Changelog
