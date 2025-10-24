@@ -1,5 +1,16 @@
 # Changelog
 
+### v1.1.1 (Oct 24, 2025)
+
+## Changed
+
+- Updated dependency SDK versions to latest stable releases
+  - SendbirdChatSDK: v4.31.1
+  - SendbirdPackages: v0.10.8 
+
+## Bugfix
+
+- Fix AIAgent.GroupChannelListQuery to exclude non-filtered regular channels.
 ### v1.1.0 (Oct 02, 2025)
 
 # Interfaces
