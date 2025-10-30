@@ -1,5 +1,15 @@
 # Changelog
 
+### v1.2.0 (Oct 30, 2025)
+
+## Features
+- **Failed Message Localization**
+  - Added public `SBALocalization.Conversation.List.FailedMessage` class with `retry` and `delete` properties for custom localization support
+
+## Changes
+- Updated dependency SDK versions to latest stable releases
+  - SendbirdChatSDK: v4.32.0
+  - SendbirdUIMessageTemplate: v3.32.3
 ### v1.1.1 (Oct 24, 2025)
 
 ## Changed
