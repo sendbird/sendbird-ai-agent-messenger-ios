@@ -1,5 +1,24 @@
 # Changelog
 
+### v1.3.0 (Nov 05, 2025)
+
+### Features
+- **Conversation Closure API**
+  - Added public `closeConversation()` method in `SBAConversationViewModel` for programmatic conversation closure
+- **Message Feedback (:+1: / :-1: + Comments)**
+  - Added user feedback capability for AI-generated messages with good/bad rating and optional comments (up to 100 characters)
+  - Supports editing and deleting feedback in active conversations
+  - Read-only feedback display for closed conversations
+  - Includes 11 language localizations and RTL support
+
+### Improvements
+  - **Support Resolution feedback as optional**
+    - Support for optional CRE (Customer Resolution Evaluation) in CSAT submissions
+    - Users can now submit with only score selection when CRE is configured as optional  
+
+### Bug Fixes
+- Fixed intermittent issue where theme updates would fail to apply
+- Fixed an issue where the input view becomes active during Agent response
 ### v1.2.0 (Oct 30, 2025)
 
 ## Features
