@@ -1,6 +1,6 @@
 # Changelog
 
-### v1.3.0 (Nov 05, 2025)
+## v1.3.0 (Nov 05, 2025) with ChatSDK v4.33.0
 
 ### Features
 - **Conversation Closure API**
@@ -19,42 +19,43 @@
 ### Bug Fixes
 - Fixed intermittent issue where theme updates would fail to apply
 - Fixed an issue where the input view becomes active during Agent response
-### v1.2.0 (Oct 30, 2025)
 
-## Features
+## v1.2.0 (Oct 30, 2025) with ChatSDK v4.32.0
+
+### Features
 - **Failed Message Localization**
   - Added public `SBALocalization.Conversation.List.FailedMessage` class with `retry` and `delete` properties for custom localization support
 
-## Changes
+### Changes
 - Updated dependency SDK versions to latest stable releases
   - SendbirdChatSDK: v4.32.0
   - SendbirdUIMessageTemplate: v3.32.3
-### v1.1.1 (Oct 24, 2025)
 
-## Changed
+## v1.1.1 (Oct 24, 2025) with ChatSDK v4.31.1
+
+### Changed
 
 - Updated dependency SDK versions to latest stable releases
   - SendbirdChatSDK: v4.31.1
   - SendbirdPackages: v0.10.8 
 
-## Bugfix
+### Bugfix
 
 - Fix AIAgent.GroupChannelListQuery to exclude non-filtered regular channels.
-### v1.1.0 (Oct 02, 2025)
 
-# Interfaces
+## v1.1.0 (Oct 02, 2025) with ChatSDK v4.30.0
+
+### Interfaces
 - Enhanced `SBAMessageCSATData`: Added new public properties for custom CSAT configuration
   - title, csatQuestion, csatSubmitLabel, csatSubmittedLabel
   - csatScores: [ScoreData], cre: CREData?, followUp: [FollowUpData]?
 
-# Features
+### Features
 - Custom CSAT support: Dashboard-driven CSAT UI customization with follow-up questions
 
-### v1.0.0 (Sep 25, 2025)
+## v1.0.0 (Sep 25, 2025) with ChatSDK v4.30.0
 
-# Sendbird AI Agent iOS SDK - GA Release Changelog
-
-## v1.0.0 (Sep 25, 2025)
+## **Sendbird AI Agent iOS SDK - GA Release Changelog**
 
 ### Highlights
 
@@ -306,7 +307,7 @@ AIAgentMessenger.authenticate(aiAgentId: "your_ai_agent_id") { result in
 
 *This release is the first GA (Generally Available) version of the Sendbird AI Agent iOS SDK. It is safe for use in production environments.*
 
-### v0.10.9 (Sep 03, 2025)
+## v0.10.9 (Sep 03, 2025) with ChatSDK v4.29.2
 
 ### Public API Changes
 - **`SBAViewModelSet.ConversationViewModel` is now public** - Allows external customization of conversation view models
@@ -324,7 +325,7 @@ AIAgentMessenger.authenticate(aiAgentId: "your_ai_agent_id") { result in
 - **Fixed conversation reset when starting new conversation** - Properly resets header, list, and input components
 - **Fixed navigation handling for non-navigation controller scenarios** - Gracefully handles cases without `AIAgentNavigationController`
 
-### v0.10.8 (Sep 01, 2025)
+## v0.10.8 (Sep 01, 2025) with ChatSDK v4.29.2
 
 ### Improvements
 
@@ -341,7 +342,7 @@ SBAViewControllerSet.ConversationViewController.init(
 )
 ```
 
-### v0.10.7 (Aug 31, 2025)
+## v0.10.7 (Aug 31, 2025) with ChatSDK v4.29.2
 
 ### Features
 - **Conversation Module Customization**
@@ -376,7 +377,7 @@ SBAViewControllerSet.ConversationViewController.init(
   - Fixed constraint activation timing issues
   - Fixed markdown view layout with proper max width handling
 
-### v0.10.6 (Aug 25, 2025)
+## v0.10.6 (Aug 25, 2025) with ChatSDK v4.29.2
 
 ### Features
 - **Conversation Header Customization**
@@ -394,13 +395,13 @@ SBAViewControllerSet.ConversationViewController.init(
 - Optimized streaming event handling to prevent duplicates
 - Improved table view reload performance with debouncing
 
-### v0.10.5 (Aug 22, 2025)
+## v0.10.5 (Aug 22, 2025) with ChatSDK v4.29.2
 
 ### Changed
 - Exposed public properties in SBAConversationModule.Header:
   - `menuButton`, `closeButton`, and `handoffButton`
 
-### v0.10.4 (Aug 18, 2025)
+## v0.10.4 (Aug 18, 2025) with ChatSDK v4.29.2
 
 ### Improvements
 - Profile Image Hidden Options in Conversation
@@ -409,7 +410,7 @@ SBAViewControllerSet.ConversationViewController.init(
   - Added `SBAConfig.Conversation.List.shouldShowSenderProfile`
     - Controls sender profile image visibility in message list 
 
-### v0.10.3 (Aug 18, 2025)
+## v0.10.3 (Aug 18, 2025) with ChatSDK v4.29.2
 
 ### Improvements
 - Profile Image Hidden Options in Conversation
@@ -418,30 +419,23 @@ SBAViewControllerSet.ConversationViewController.init(
   - Added `SBAConfig.Conversation.List.shouldShowSenderProfile`
     - Controls sender profile image visibility in message list 
 
-### v0.10.2 (Aug 14, 2025)
+## v0.10.2 (Aug 14, 2025) with ChatSDK v4.29.2
 
 
 ### Improvements
 - Supports minimum version to iOS 14 
 
-### v0.10.2 (Aug 14, 2025)
-
-
-### Improvements
-- Supports minimum version to iOS 14 
-
-### v0.10.1 (Aug 12, 2025)
-
+## v0.10.1 (Aug 12, 2025) with ChatSDK v4.29.2
 
 ### Improvements
 - iOS minor version issue supports
 
-### v0.9.15 (Aug 08, 2025)
-
+## v0.9.15 (Aug 08, 2025)
 
 ### Improvements
 - Fixed image ratio handling.
-### v0.10.0 (Aug 08, 2025)
+
+## v0.10.0 (Aug 08, 2025)
 
 ### Features
 - **New Authentication Flow**: Streamlined authentication with automatic connection
@@ -586,58 +580,58 @@ SBAViewControllerSet.ConversationViewController.init(
    }
    ```
 
-### v0.9.14 (Aug 07, 2025)
+## v0.9.14 (Aug 07, 2025)
 
 ### Improvements
 
 - Fixed an issue where the file attachment view was not appearing.
 
-### v0.9.14 (Aug 07, 2025)
+## v0.9.14 (Aug 07, 2025)
 
 ### Improvements
 
 - Improved functionality to handle Desk CSAT
   - Added `desk` type in `SBAMessageCSATData.DataType`
 
-### v0.9.13 (Jul 24, 2025)
+## v0.9.13 (Jul 24, 2025)
 
 ### Improvements
 
 - Improved functionality to handle Desk CSAT
   - Added `desk` type in `SBAMessageCSATData.DataType`
 
-### v0.9.12 (Jul 18, 2025)
+## v0.9.12 (Jul 18, 2025)
 
 ### Improvements
 
 - Improved handling of anonymous users
 
-### v0.9.11 (Jul 14, 2025)
+## v0.9.11 (Jul 14, 2025)
 
 ### Features
 - Updated file upload button visibility to ensure it's visible after handed off to human agents
 
-### v0.9.10 (Jul 01, 2025)
+## v0.9.10 (Jul 01, 2025)
 
 ### Fixed
 - Updated minimum required version of the dependency SDK
 
-### v0.9.9 (Jun 30, 2025)
+## v0.9.9 (Jun 30, 2025)
 
 ### Fixed
 - Updated swift-tools-version to 6.1
 
-### v0.9.8 (Jun 30, 2025)
+## v0.9.8 (Jun 30, 2025)
 
 ### Fixed
 - Updated swift-tools-version to 6.1
 
-### v0.9.7 (Jun 30, 2025)
+## v0.9.7 (Jun 30, 2025)
 
 ### Fixed
 - Improved framework binary compatibility across different Swift versions
 
-### v0.9.6 (Jun 27, 2025)
+## v0.9.6 (Jun 27, 2025)
 
 ### BREAKING CHANGES
 - **Minimum Requirements**: Xcode 16.3+ (Swift 6.1+) now required
@@ -656,7 +650,7 @@ this SDK is not supported by the compiler
 ```
 **Fix**: Update to Xcode 16.3+, then clean and rebuild your project.
 
-### v0.9.5 (Jun 25, 2025)
+## v0.9.5 (Jun 25, 2025)
 
 ### Improvements
 
@@ -670,7 +664,7 @@ this SDK is not supported by the compiler
 - Add `didTapMessageLink()` event in Conversation ListComponent
   - Enables custom handling of link actions in markdown view
 
-### v0.9.4 (Jun 13, 2025)
+## v0.9.4 (Jun 13, 2025)
 
 ### Improvements
 - Applied hidden state to poweredByMessage using appAttribute
