@@ -1,6 +1,6 @@
 # Changelog
 
-### v1.3.1 (Nov 14, 2025)
+## v1.3.1 (Nov 14, 2025) with ChatSDK v4.34.0
 
 ### Improvements
 - Updated dependency SDK versions to latest stable releases
