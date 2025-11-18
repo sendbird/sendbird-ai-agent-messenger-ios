@@ -9,7 +9,7 @@ let package = Package(
     ],
     dependencies: [
         .package(
-            url: "https://github.com/sendbird/sendbird-ai-agent-core-ios",
+            url: "https://github.com/sendbird/delight-ai-agent-core-ios",
             from: "1.3.1"
         )
     ],
@@ -17,7 +17,7 @@ let package = Package(
         .target(
             name: "SendbirdAIAgentMessenger",
             dependencies: [
-                .product(name: "SendbirdAIAgentCore", package: "sendbird-ai-agent-core-ios")
+                .product(name: "SendbirdAIAgentCore", package: "delight-ai-agent-core-ios")
             ]
         )
     ]
