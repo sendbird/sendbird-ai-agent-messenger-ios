@@ -1,5 +1,11 @@
 # Changelog
 
+## v1.4.0 (Nov 18, 2025) with Chat SDK v4.34.0
+
+### Improvements
+  - Implemented file attachment rules system to support server-side control of uploadable file types
+  - Improved the performance and structure of the starter kit
+  - Changed SBALogType to hierarchical levels and simplified log level mapping across the SDK
 ## v1.3.1 (Nov 14, 2025) with ChatSDK v4.34.0
 
 ### Improvements
