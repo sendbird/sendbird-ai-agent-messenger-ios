@@ -1,5 +1,10 @@
 # Changelog
 
+## v1.4.1 (Nov 19, 2025) with Chat SDK v4.34.1
+
+### Bugfixes
+  - Fixed issue where the action sheet text color was not visible
+  - Fix thread timing issue in detachLauncher
 ## v1.4.0 (Nov 18, 2025) with Chat SDK v4.34.0
 
 ### Improvements
